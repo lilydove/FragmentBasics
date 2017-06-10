@@ -48,13 +48,13 @@ public class HeadlinesFragment extends ListFragment {
         mCallback.onArticleSelected(position);
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        TextView textView = new TextView(getActivity());
-        textView.setText("HeadlinesFragment weight=1");
-        textView.setTextSize(26);
-        return textView;
-    }
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                             Bundle savedInstanceState) {
+//        TextView textView = new TextView(getActivity());
+//        textView.setText("HeadlinesFragment weight=1");
+//        textView.setTextSize(26);
+//        return textView;
+//    }
 
 }

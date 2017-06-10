@@ -7,7 +7,9 @@ import android.os.Bundle;
 import layout.ArticleFragment;
 import layout.HeadlinesFragment;
 
-public class StartFrameActivity extends AppCompatActivity {
+public class StartFrameActivity extends AppCompatActivity
+        implements HeadlinesFragment.OnHeadlineSelectedListener
+{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +26,12 @@ public class StartFrameActivity extends AppCompatActivity {
             }
 
             //  Create a new Fragment that is put into Activity
-            HeadlinesFragment firstFragment = new HeadlinesFragment();
+            ArticleFragment firstFragment = new ArticleFragment();
+            HeadlinesFragment secondFragment = new HeadlinesFragment();
 
             //  if the Activity is started by a special directive,
             //  please deliver extras of Intent to the Fragment in the form of a parameter
             firstFragment.setArguments(getIntent().getExtras());
-
             //  add the Fragment into "fragment_container" Fragment
             getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,firstFragment).commit();
         }
