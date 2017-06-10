@@ -15,6 +15,7 @@ import com.training.wuyi.fragmentbasics.R;
  */
 public class ArticleFragment extends Fragment {
 
+    public static String  ARG_POSITION ;
 
     public ArticleFragment() {
         // Required empty public constructor
@@ -28,6 +29,10 @@ public class ArticleFragment extends Fragment {
         textView.setText("ArticleFragment weight=1");
         textView.setTextSize(26);
         return textView;
+    }
+
+    public void updateArticleView(int position){
+
     }
 
 }

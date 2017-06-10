@@ -1,13 +1,20 @@
 package com.training.wuyi.fragmentbasics;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.news_articles);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void startFragment(View view){
+        Intent intent = new Intent(this,StartFrameActivity.class);
+        startActivity(intent);
     }
 }
